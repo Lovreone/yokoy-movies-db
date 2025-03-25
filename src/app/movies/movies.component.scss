@@ -1,0 +1,33 @@
+table {
+  border-collapse: collapse;
+}
+
+thead td {
+  font-weight: bold;
+}
+
+td {
+  padding: 9px;
+}
+
+tr {
+  border-bottom: 2px solid #aea8ac;
+}
+
+.filters {
+  display: flex;
+}
+.filters > * {
+  margin-right: 12px;
+}
+
+.table-link {
+  color: blue;
+  cursor: pointer;
+}
+.table-header {
+  margin: 8px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

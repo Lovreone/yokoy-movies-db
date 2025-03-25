@@ -1,0 +1,25 @@
+<div class="modal-content" style="padding: 20px">
+  <h2 *ngIf="!data.movie?.id">Add new movie</h2>
+  <h2 *ngIf="data.movie?.id">Edit movie with id = {{ data.movie.id }}</h2>
+
+  <form [formGroup]="formGroup">
+    <input
+      placeholder="title"
+      type="text"
+      formControlName="title"
+      [class.error]="submitted && formGroup.get('title')?.errors"
+    />
+    <input
+      placeholder="year"
+      type="number"
+      formControlName="year"
+      [class.error]="submitted && formGroup.get('year')?.errors"
+    />
+    <select multiple placeholder="actors" formControlName="actors">
+      <option value="" disabled selected>Select actors</option>
+      <option *ngFor="let a of actors" [value]="a.name">{{ a.name }}</option>
+    </select>
+    <button (click)="submit()" class="submit">Save!</button>
+    <button (click)="delete()" class="submit">Delete!</button>
+  </form>
+</div>

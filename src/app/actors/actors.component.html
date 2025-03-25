@@ -1,0 +1,31 @@
+<div class="header">
+  <a href routerLink="/actors" routerLinkActive="is-active">Actors</a> |
+  <a href routerLink="/movies" routerLinkActive="is-active">Movies</a>
+</div>
+<h3>Yokoy actors</h3>
+<div class="filters" style="margin-bottom: 12px">
+  <div class="search">
+    <label for="search">Search: </label>
+    <input
+      type="text"
+      name="search"
+      placeholder="Search"
+      (keyup)="onSearchChange($event)"
+    />
+  </div>
+  <button (click)="addNew()">Add</button>
+</div>
+<table>
+  <thead>
+    <tr>
+      <td>Id</td>
+      <td>Name</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let a of actors">
+      <td>{{ a.id }}</td>
+      <td>{{ a.name }}</td>
+    </tr>
+  </tbody>
+</table>

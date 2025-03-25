@@ -1,0 +1,22 @@
+table {
+  border-collapse: collapse;
+}
+
+thead td {
+  font-weight: bold;
+}
+
+td {
+  padding: 9px;
+}
+
+tr {
+  border-bottom: 2px solid #aea8ac;
+}
+
+.filters {
+  display: flex;
+}
+.filters > * {
+  margin-right: 12px;
+}
