@@ -6,7 +6,7 @@ body {
 }
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
 
 input,
@@ -18,4 +18,18 @@ select {
 
 button.submit {
   float: right;
+}
+
+div.filters {
+  margin-bottom: 12px;
+}
+
+div.modal-content {
+  padding: 20px;
+}
+
+div.header > a.is-active {
+  color: black;
+  background-color: lightblue;
+  text-decoration: none;
 }

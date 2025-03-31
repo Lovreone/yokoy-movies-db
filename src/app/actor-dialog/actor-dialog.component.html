@@ -1,0 +1,12 @@
+<div class="modal-content">
+  <h2>Add new actor</h2>
+  <form [formGroup]="formGroup">
+    <input
+      type="text"
+      formControlName="name"
+      placeholder="Full name"
+      [class.error]="isSubmitted && formGroup.get('name')?.errors"
+    />
+    <button (click)="add()" class="submit">Add</button>
+  </form>
+</div>
